@@ -1,378 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
   <title>SellBetter Supply</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --line: #e5e7eb;
-      --accent: #111827;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .container {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-    header {
-      padding: 22px 0;
-      background: rgba(255,255,255,0.9);
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(8px);
-      z-index: 20;
-    }
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-    .brand {
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: -0.02em;
-    }
-    .nav a {
-      text-decoration: none;
-      color: var(--muted);
-      margin-left: 18px;
-      font-size: 14px;
-    }
-    .hero {
-      padding: 84px 0 64px;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
-      align-items: center;
-    }
-    h1 {
-      font-size: clamp(34px, 6vw, 60px);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin: 0 0 18px;
-    }
-    .subtitle {
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 760px;
-      margin-bottom: 28px;
-    }
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 18px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      border: 1px solid var(--text);
-    }
-    .btn.primary {
-      background: var(--text);
-      color: #fff;
-    }
-    .btn.secondary {
-      color: var(--text);
-      background: transparent;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 8px 30px rgba(17,24,39,0.04);
-    }
-    .mini-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    section {
-      padding: 26px 0 12px;
-    }
-    h2 {
-      font-size: 30px;
-      margin: 0 0 10px;
-      letter-spacing: -0.03em;
-    }
-    .section-intro {
-      color: var(--muted);
-      max-width: 760px;
-      margin-bottom: 24px;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-    .feature-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .muted { color: var(--muted); }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-    }
-    .step-num {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-    ul.clean {
-      padding-left: 18px;
-      margin: 0;
-    }
-    footer {
-      padding: 48px 0 70px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 18px;
-      align-items: start;
-    }
-    .policy-links a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-right: 14px;
-    }
-    .badge {
-      display: inline-block;
-      font-size: 13px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: #f3f4f6;
-      border: 1px solid var(--line);
-      margin: 0 8px 8px 0;
-    }
-    @media (max-width: 900px) {
-      .hero-grid, .grid-3, .grid-2, .steps, .footer-grid {
-        grid-template-columns: 1fr;
-      }
-      .hero { padding-top: 56px; }
-      .nav-links { display: none; }
-    }
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.2">
+  <style type="text/css">
+    body {background-color: #f5f6f9}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 32.0px; font: 20.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 12.0px Arial; color: #585e6d; -webkit-text-stroke: #585e6d}
+    p.p4 {margin: 0.0px 0.0px 28.0px 0.0px; line-height: 28.8px; font: 18.0px Arial; color: #585e6d; -webkit-text-stroke: #585e6d}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 12.0px Arial; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #0e121d}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 12.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 28.8px; font: 18.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d}
+    p.p8 {margin: 0.0px 0.0px 12.0px 0.0px; line-height: 19.2px; font: 12.0px Arial; color: #585e6d; -webkit-text-stroke: #585e6d}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.8px; font: 13.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d}
+    p.p11 {margin: 0.0px 0.0px 24.0px 0.0px; line-height: 19.2px; font: 12.0px Arial; color: #585e6d; -webkit-text-stroke: #585e6d}
+    p.p12 {margin: 0.0px 0.0px 12.0px 0.0px; line-height: 19.2px; font: 12.0px Arial; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 32.0px; font: 20.0px Arial; color: #585e6d; -webkit-text-stroke: #585e6d}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 22.4px; font: 14.0px Arial; color: #585e6d; -webkit-text-stroke: #585e6d}
+    li.li2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 19.2px; font: 12.0px Arial; color: #585e6d; -webkit-text-stroke: #585e6d}
+    span.s1 {font-kerning: none; background-color: rgba(255, 255, 255, 0.9)}
+    span.s2 {font-kerning: none}
+    span.s3 {font-kerning: none; color: #ffffff; -webkit-text-stroke: 0px #ffffff}
+    span.s4 {font-kerning: none; color: #0e121d; -webkit-text-stroke: 0px #0e121d}
+    span.s5 {font-kerning: none; background-color: #ffffff}
+    span.s6 {font-kerning: none; background-color: #f0f1f4}
+    span.s7 {font: 12.0px Arial; font-kerning: none; background-color: #ffffff}
+    span.s8 {background-color: #ffffff; -webkit-text-stroke: 0px #000000}
+    span.s9 {font-kerning: none; color: #585e6d; background-color: #ffffff; -webkit-text-stroke: 0px #585e6d}
+    span.s10 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0000e9}
+    ul.ul1 {list-style-type: disc}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">SellBetter Supply</div>
-      <nav class="nav-links">
-        <a href="#offer">What We Offer</a>
-        <a href="#who">Who We Work With</a>
-        <a href="#how">How It Works</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="mini-label">GCC Social Commerce Supply</div>
-          <h1>Products that are easier to package, easier to present, and easier to sell.</h1>
-          <p class="subtitle">
-            SellBetter Supply helps small GCC brands, boutiques, and social sellers source curated products with upgraded packaging and ready-to-use content assets.
-          </p>
-          <div class="cta-row">
-            <a class="btn primary" href="mailto:hello@sellbettersupply.com?subject=Catalog%20Request%20-%20SellBetter%20Supply">Request Catalog</a>
-            <a class="btn secondary" href="https://wa.me/8618922255562" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="mini-label">What Makes Us Different</div>
-          <div class="feature-title">More than supply</div>
-          <p class="muted">
-            We do not just source products. We prepare products in a way that works better for social commerce: stronger visual appeal, better packaging, and content-ready assets that help sellers move faster.
-          </p>
-          <div>
-            <span class="badge">Curated SKUs</span>
-            <span class="badge">Upgraded Packaging</span>
-            <span class="badge">Small-Batch Testing</span>
-            <span class="badge">Content-Ready Assets</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="offer">
-      <div class="container">
-        <h2>What We Offer</h2>
-        <p class="section-intro">
-          We support sellers who need products that look stronger on social, feel better in hand, and are easier to test in smaller quantities.
-        </p>
-        <div class="grid-3">
-          <div class="card">
-            <div class="feature-title">Curated Product Sourcing</div>
-            <p class="muted">We focus on visually strong, giftable, and social-commerce-friendly items suitable for GCC sellers.</p>
-          </div>
-          <div class="card">
-            <div class="feature-title">Upgraded Packaging</div>
-            <p class="muted">We improve product presentation with packaging options designed to increase perceived value and support higher selling prices.</p>
-          </div>
-          <div class="card">
-            <div class="feature-title">Content-Ready Assets</div>
-            <p class="muted">Basic photos, videos, and selling points can be prepared to help clients publish faster on Instagram, TikTok, and WhatsApp.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="who">
-      <div class="container">
-        <h2>Who We Work With</h2>
-        <p class="section-intro">
-          Our supply model is designed for smaller teams that need flexible sourcing, stronger presentation, and lower-risk testing.
-        </p>
-        <div class="grid-2">
-          <div class="card">
-            <div class="feature-title">Best fit clients</div>
-            <ul class="clean muted">
-              <li>Small Instagram and TikTok sellers</li>
-              <li>GCC boutiques and gift shops</li>
-              <li>Emerging product brands</li>
-              <li>Private sellers and social commerce resellers</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="feature-title">Why clients work with us</div>
-            <ul class="clean muted">
-              <li>They want products that are easier to present online</li>
-              <li>They need packaging that supports better positioning</li>
-              <li>They want small-batch testing before scaling</li>
-              <li>They need content assets that save time</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <h2>Why SellBetter Supply</h2>
-        <p class="section-intro">
-          Traditional suppliers usually stop at product and price. We focus on making products easier to sell in social commerce environments.
-        </p>
-        <div class="grid-3">
-          <div class="card">
-            <div class="feature-title">Better visual fit</div>
-            <p class="muted">We prioritize items that are easier to display and more likely to perform in image- and video-led selling.</p>
-          </div>
-          <div class="card">
-            <div class="feature-title">Stronger packaging value</div>
-            <p class="muted">Packaging is treated as part of the selling strategy, not only as protection.</p>
-          </div>
-          <div class="card">
-            <div class="feature-title">Faster commercial use</div>
-            <p class="muted">We help shorten the time from sourcing to presentation by preparing ready-to-use support materials.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="how">
-      <div class="container">
-        <h2>How It Works</h2>
-        <p class="section-intro">
-          Our process is designed to make it easier for sellers to test, present, and reorder without unnecessary complexity.
-        </p>
-        <div class="steps">
-          <div class="card"><div class="step-num">Step 1</div><div class="feature-title">Request Catalog</div><div class="muted">Start by reviewing available SKUs and categories.</div></div>
-          <div class="card"><div class="step-num">Step 2</div><div class="feature-title">Select Options</div><div class="muted">Choose product, packaging level, and support needs.</div></div>
-          <div class="card"><div class="step-num">Step 3</div><div class="feature-title">Receive Quote</div><div class="muted">We confirm details, pricing, and order scope.</div></div>
-          <div class="card"><div class="step-num">Step 4</div><div class="feature-title">Pay Securely</div><div class="muted">Orders can be confirmed via secure payment link.</div></div>
-          <div class="card"><div class="step-num">Step 5</div><div class="feature-title">Test & Restock</div><div class="muted">Start with a sample or small batch, then reorder based on response.</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p class="section-intro">For catalog requests, product discussions, or partnership enquiries, please contact us below.</p>
-        <div class="grid-2">
-          <div class="card">
-            <div class="feature-title">General Enquiries</div>
-            <p class="muted"><strong>Email:</strong> hello@sellbettersupply.com</p>
-            <p class="muted"><strong>Website:</strong> sellbettersupply.com</p>
-            <p class="muted"><strong>WhatsApp:</strong> <a href="https://wa.me/8618922255562" target="_blank" rel="noopener noreferrer">+86 189 2225 5562</a></p>
-          </div>
-          <div class="card">
-            <div class="feature-title">Working model</div>
-            <p class="muted">We currently support small-batch product testing, packaging upgrades, and content-ready supply support for GCC social commerce sellers.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="terms">
-      <div class="container">
-        <h2>Terms &amp; Conditions</h2>
-        <p class="section-intro">All product availability, pricing, order quantities, packaging options, and delivery timelines are subject to confirmation at the time of quotation. Orders are processed only after payment confirmation.</p>
-      </div>
-    </section>
-
-    <section id="shipping">
-      <div class="container">
-        <h2>Shipping &amp; Refund Policy</h2>
-        <p class="section-intro">Shipping timelines may vary by destination, carrier, and customs processing. Any product issue or shipping issue should be reported within the agreed inspection window after receipt. Final policy details can be confirmed per order.</p>
-      </div>
-    </section>
-
-    <section id="privacy">
-      <div class="container">
-        <h2>Privacy Policy</h2>
-        <p class="section-intro">We only use contact and order information for communication, quotation, order processing, and customer support. We do not sell customer information to third parties.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="brand" style="margin-bottom:10px;">SellBetter Supply</div>
-        <div>Legal entity: Guangzhou Jushu Engine Technology Co., Ltd.</div>
-        <div>Email: hello@sellbettersupply.com</div>
-        <div>Website: sellbettersupply.com</div>
-      </div>
-      <div class="policy-links">
-        <a href="#terms">Terms &amp; Conditions</a>
-        <a href="#shipping">Shipping &amp; Refund Policy</a>
-        <a href="#privacy">Privacy Policy</a>
-      </div>
-    </div>
-  </footer>
+<p class="p1"><span class="s1"><b>SellBetter Supply</b></span></p>
+<p class="p2"><span class="s2">GCC SOCIAL COMMERCE SUPPLY</span></p>
+<h1 style="margin: 0.0px 0.0px 18.0px 0.0px; line-height: 50.4px; font: 48.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d"><span class="s2"><b>Products that are easier to package, easier to present, and easier to sell.</b></span></h1>
+<p class="p4"><span class="s2">SellBetter Supply helps small GCC brands, boutiques, and social sellers source curated products with upgraded packaging and ready-to-use content assets.<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s2"><a href="mailto:hello@sellbettersupply.com?subject=Catalog%20Request%20-%20SellBetter%20Supply"><b>Request Catalog</b><span class="s3"><b></b></span></a></span></p>
+<p class="p6"><span class="s2"><a href="https://wa.me/8618922255562"><b>Contact on WhatsApp</b><span class="s4"><b></b></span></a></span></p>
+<p class="p2"><span class="s5">WHAT MAKES US DIFFERENT</span></p>
+<p class="p7"><span class="s5"><b>More than supply</b></span></p>
+<p class="p8"><span class="s5">We do not just source products. We prepare products in a way that works better for social commerce: stronger visual appeal, better packaging, and content-ready assets that help sellers move faster.<span class="Apple-converted-space"> </span></span></p>
+<p class="p9"><span class="s6">Curated SKUs</span><span class="s7"> </span><span class="s6">Upgraded Packaging</span><span class="s7"> </span><span class="s6">Small-Batch Testing</span><span class="s7"> </span><span class="s6">Content-Ready Assets</span><span class="s7"><span class="Apple-converted-space"> </span></span></p>
+<h2 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 48.0px; font: 30.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d"><span class="s2"><b>What We Offer</b></span></h2>
+<p class="p11"><span class="s2">We support sellers who need products that look stronger on social, feel better in hand, and are easier to test in smaller quantities.<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s5"><b>Curated Product Sourcing</b></span></p>
+<p class="p8"><span class="s5">We focus on visually strong, giftable, and social-commerce-friendly items suitable for GCC sellers.</span></p>
+<p class="p7"><span class="s5"><b>Upgraded Packaging</b></span></p>
+<p class="p8"><span class="s5">We improve product presentation with packaging options designed to increase perceived value and support higher selling prices.</span></p>
+<p class="p7"><span class="s5"><b>Content-Ready Assets</b></span></p>
+<p class="p8"><span class="s5">Basic photos, videos, and selling points can be prepared to help clients publish faster on Instagram, TikTok, and WhatsApp.</span></p>
+<h2 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 48.0px; font: 30.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d"><span class="s2"><b>Who We Work With</b></span></h2>
+<p class="p11"><span class="s2">Our supply model is designed for smaller teams that need flexible sourcing, stronger presentation, and lower-risk testing.<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s5"><b>Best fit clients</b></span></p>
+<ul class="ul1">
+  <li class="li2"><span class="s8"></span><span class="s5">Small Instagram and TikTok sellers</span></li>
+  <li class="li2"><span class="s8"></span><span class="s5">GCC boutiques and gift shops</span></li>
+  <li class="li2"><span class="s8"></span><span class="s5">Emerging product brands</span></li>
+  <li class="li2"><span class="s8"></span><span class="s5">Private sellers and social commerce resellers</span></li>
+</ul>
+<p class="p7"><span class="s5"><b>Why clients work with us</b></span></p>
+<ul class="ul1">
+  <li class="li2"><span class="s8"></span><span class="s5">They want products that are easier to present online</span></li>
+  <li class="li2"><span class="s8"></span><span class="s5">They need packaging that supports better positioning</span></li>
+  <li class="li2"><span class="s8"></span><span class="s5">They want small-batch testing before scaling</span></li>
+  <li class="li2"><span class="s8"></span><span class="s5">They need content assets that save time</span></li>
+</ul>
+<h2 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 48.0px; font: 30.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d"><span class="s2"><b>Why SellBetter Supply</b></span></h2>
+<p class="p11"><span class="s2">Traditional suppliers usually stop at product and price. We focus on making products easier to sell in social commerce environments.<span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s5"><b>Better visual fit</b></span></p>
+<p class="p8"><span class="s5">We prioritize items that are easier to display and more likely to perform in image- and video-led selling.</span></p>
+<p class="p7"><span class="s5"><b>Stronger packaging value</b></span></p>
+<p class="p8"><span class="s5">Packaging is treated as part of the selling strategy, not only as protection.</span></p>
+<p class="p7"><span class="s5"><b>Faster commercial use</b></span></p>
+<p class="p8"><span class="s5">We help shorten the time from sourcing to presentation by preparing ready-to-use support materials.</span></p>
+<h2 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 48.0px; font: 30.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d"><span class="s2"><b>How It Works</b></span></h2>
+<p class="p11"><span class="s2">Our process is designed to make it easier for sellers to test, present, and reorder without unnecessary complexity.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s5">Step 1</span></p>
+<p class="p7"><span class="s5"><b>Request Catalog</b></span></p>
+<p class="p2"><span class="s5">Start by reviewing available SKUs and categories.</span></p>
+<p class="p2"><span class="s5">Step 2</span></p>
+<p class="p7"><span class="s5"><b>Select Options</b></span></p>
+<p class="p2"><span class="s5">Choose product, packaging level, and support needs.</span></p>
+<p class="p2"><span class="s5">Step 3</span></p>
+<p class="p7"><span class="s5"><b>Receive Quote</b></span></p>
+<p class="p2"><span class="s5">We confirm details, pricing, and order scope.</span></p>
+<p class="p2"><span class="s5">Step 4</span></p>
+<p class="p7"><span class="s5"><b>Pay Securely</b></span></p>
+<p class="p2"><span class="s5">Orders can be confirmed via secure payment link.</span></p>
+<p class="p2"><span class="s5">Step 5</span></p>
+<p class="p7"><span class="s5"><b>Test &amp; Restock</b></span></p>
+<p class="p2"><span class="s5">Start with a sample or small batch, then reorder based on response.</span></p>
+<h2 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 48.0px; font: 30.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d"><span class="s2"><b>Contact</b></span></h2>
+<p class="p11"><span class="s2">For catalog requests, product discussions, or partnership enquiries, please contact us below.</span></p>
+<p class="p7"><span class="s5"><b>General Enquiries</b></span></p>
+<p class="p8"><span class="s5"><b>Email:</b> hello@sellbettersupply.com</span></p>
+<p class="p8"><span class="s5"><b>Website:</b> www.sellbettersupply.com</span></p>
+<p class="p12"><span class="s9"><b>WhatsApp:</b> <a href="https://wa.me/8618922255562"><span class="s10">+86 189 2225 5562</span></a></span></p>
+<p class="p7"><span class="s5"><b>Working model</b></span></p>
+<p class="p8"><span class="s5">We currently support small-batch product testing, packaging upgrades, and content-ready supply support for GCC social commerce sellers.</span></p>
+<h2 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 48.0px; font: 30.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d"><span class="s2"><b>Terms &amp; Conditions</b></span></h2>
+<p class="p11"><span class="s2">All product availability, pricing, order quantities, packaging options, and delivery timelines are subject to confirmation at the time of quotation. Orders are processed only after payment confirmation.</span></p>
+<h2 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 48.0px; font: 30.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d"><span class="s2"><b>Shipping &amp; Refund Policy</b></span></h2>
+<p class="p11"><span class="s2">Shipping timelines may vary by destination, carrier, and customs processing. Any product issue or shipping issue should be reported within the agreed inspection window after receipt. Final policy details can be confirmed per order.</span></p>
+<h2 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 48.0px; font: 30.0px Arial; color: #0e121d; -webkit-text-stroke: #0e121d"><span class="s2"><b>Privacy Policy</b></span></h2>
+<p class="p11"><span class="s2">We only use contact and order information for communication, quotation, order processing, and customer support. We do not sell customer information to third parties.</span></p>
+<p class="p13"><span class="s2"><b>SellBetter Supply</b></span></p>
+<p class="p14"><span class="s2">Legal entity: Guangzhou Jushu Engine Technology Co., Ltd.</span></p>
+<p class="p14"><span class="s2">Email: hello@sellbettersupply.com</span></p>
+<p class="p14"><span class="s2">Website: www.sellbettersupply.com</span></p>
+<p class="p14"><span class="s2">Terms &amp; Conditions Shipping &amp; Refund Policy Privacy Policy<span class="Apple-converted-space"> </span></span></p>
 </body>
 </html>
