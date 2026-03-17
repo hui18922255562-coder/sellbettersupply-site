@@ -4,121 +4,172 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SellBetter Supply</title>
+  <meta name="description" content="Curated evening bags and accessories for GCC sellers. Small-batch product supply, upgraded packaging, and ready-to-present product sets." />
   <style>
     :root {
-      --bg: #f7f8fa;
+      --bg: #f6f6f4;
       --card: #ffffff;
-      --text: #111827;
+      --text: #111111;
       --muted: #6b7280;
       --line: #e5e7eb;
       --accent: #111827;
+      --accent-2: #f3f4f6;
+      --btn: #111827;
+      --btn-text: #ffffff;
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.55;
     }
+    a { color: inherit; text-decoration: none; }
     .container {
       width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
     }
     header {
-      padding: 22px 0;
-      background: rgba(255,255,255,0.9);
-      border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
-      backdrop-filter: blur(8px);
       z-index: 20;
+      background: rgba(246, 246, 244, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
     }
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 20px;
     }
     .brand {
       font-weight: 700;
-      font-size: 20px;
-      letter-spacing: -0.02em;
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
     }
-    .nav a {
-      text-decoration: none;
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
       color: var(--muted);
-      margin-left: 18px;
-      font-size: 14px;
+      font-size: 0.96rem;
     }
     .hero {
-      padding: 84px 0 64px;
+      padding: 72px 0 44px;
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.25fr 0.95fr;
       gap: 28px;
-      align-items: center;
+      align-items: stretch;
     }
-    h1 {
-      font-size: clamp(34px, 6vw, 60px);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin: 0 0 18px;
-    }
-    .subtitle {
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 760px;
-      margin-bottom: 28px;
-    }
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 18px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      border: 1px solid var(--text);
-    }
-    .btn.primary {
-      background: var(--text);
-      color: #fff;
-    }
-    .btn.secondary {
-      color: var(--text);
-      background: transparent;
-    }
-    .card {
+    .hero-card, .card {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 8px 30px rgba(17,24,39,0.04);
+      border-radius: 22px;
+      box-shadow: 0 6px 24px rgba(17, 24, 39, 0.04);
     }
-    .mini-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+    .hero-copy {
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .eyebrow {
       color: var(--muted);
-      margin-bottom: 8px;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4.25rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      margin: 0 0 18px;
+      max-width: 780px;
+    }
+    .hero-copy p {
+      font-size: 1.08rem;
+      color: #4b5563;
+      max-width: 720px;
+      margin: 0 0 24px;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      font-weight: 600;
+      font-size: 0.96rem;
+    }
+    .btn.primary {
+      background: var(--btn);
+      color: var(--btn-text);
+      border-color: var(--btn);
+    }
+    .btn.secondary {
+      background: #fff;
+      color: var(--text);
+    }
+    .hero-side {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: center;
+      background: linear-gradient(180deg, #ffffff 0%, #fafaf8 100%);
+    }
+    .mini-card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      background: #fcfcfb;
+    }
+    .mini-card h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
     section {
-      padding: 26px 0 12px;
+      padding: 22px 0 10px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 18px;
     }
     h2 {
-      font-size: 30px;
-      margin: 0 0 10px;
-      letter-spacing: -0.03em;
+      font-size: clamp(1.65rem, 2.2vw, 2.15rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin: 0;
     }
     .section-intro {
       color: var(--muted);
       max-width: 760px;
-      margin-bottom: 24px;
+      margin-top: 8px;
     }
     .grid-3 {
       display: grid;
@@ -130,67 +181,101 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
     }
-    .feature-title {
-      font-size: 18px;
+    .card {
+      padding: 24px;
+    }
+    .product-tag, .tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: var(--accent-2);
+      border: 1px solid var(--line);
+    }
+    .product-title {
+      font-size: 1.28rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 18px 0 0;
     }
     .muted { color: var(--muted); }
+    ul.clean {
+      list-style: none;
+      margin: 14px 0 0;
+      padding: 0;
+    }
+    ul.clean li {
+      padding-left: 0;
+      margin: 8px 0;
+      color: #374151;
+    }
     .steps {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
     .step-num {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 6px;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
     }
-    ul.clean {
-      padding-left: 18px;
-      margin: 0;
+    .faq {
+      display: grid;
+      gap: 14px;
+    }
+    .faq .card { padding: 22px; }
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
     }
     footer {
-      padding: 48px 0 70px;
+      padding: 34px 0 56px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 0.94rem;
     }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 18px;
-      align-items: start;
-    }
-    .policy-links a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-right: 14px;
-    }
-    .badge {
-      display: inline-block;
-      font-size: 13px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: #f3f4f6;
-      border: 1px solid var(--line);
-      margin: 0 8px 8px 0;
-    }
-    @media (max-width: 900px) {
-      .hero-grid, .grid-3, .grid-2, .steps, .footer-grid {
+    @media (max-width: 960px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2,
+      .steps,
+      .contact-box {
         grid-template-columns: 1fr;
       }
-      .hero { padding-top: 56px; }
-      .nav-links { display: none; }
+      .hero-copy, .hero-side, .card {
+        padding: 22px;
+      }
+      .menu {
+        display: none;
+      }
+      .hero { padding-top: 34px; }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">SellBetter Supply</div>
-      <nav class="nav-links">
+      <a href="#" class="brand">SellBetter<br/>Supply</a>
+      <nav class="menu">
         <a href="#offer">What We Offer</a>
-        <a href="#who">Who We Work With</a>
+        <a href="#products">Products</a>
+        <a href="#pricing">Pricing</a>
         <a href="#how">How It Works</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -200,28 +285,34 @@
   <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div>
-          <div class="mini-label">GCC Social Commerce Supply</div>
-          <h1>Products that are easier to package, easier to present, and easier to sell.</h1>
-          <p class="subtitle">
-            SellBetter Supply helps small GCC brands, boutiques, and social sellers source curated products with upgraded packaging and ready-to-use content assets.
+        <div class="hero-card hero-copy">
+          <div class="eyebrow">GCC Social Commerce Supply</div>
+          <h1>Curated evening bags and accessories for GCC sellers.</h1>
+          <p>
+            Small-batch product supply, upgraded packaging, and ready-to-present product sets
+            for boutiques, gift shops, and social commerce sellers.
           </p>
-          <div class="cta-row">
-            <a class="btn primary" href="mailto:hello@sellbettersupply.com?subject=Catalog%20Request%20-%20SellBetter%20Supply">Request Catalog</a>
-            <a class="btn secondary" href="https://wa.me/8618922255562" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
+          <div class="actions">
+            <a class="btn primary" href="mailto:hello@sellbettersupply.com?subject=Request%20Product%20List">Request Product List</a>
+            <a class="btn secondary" href="https://wa.me/8618922255562" target="_blank" rel="noopener">Contact on WhatsApp</a>
           </div>
         </div>
-        <div class="card">
-          <div class="mini-label">What Makes Us Different</div>
-          <div class="feature-title">More than supply</div>
-          <p class="muted">
-            We do not just source products. We prepare products in a way that works better for social commerce: stronger visual appeal, better packaging, and content-ready assets that help sellers move faster.
-          </p>
-          <div>
-            <span class="badge">Curated SKUs</span>
-            <span class="badge">Upgraded Packaging</span>
-            <span class="badge">Small-Batch Testing</span>
-            <span class="badge">Content-Ready Assets</span>
+
+        <div class="hero-card hero-side">
+          <div class="mini-card">
+            <div class="tag">What Makes Us Different</div>
+            <h3>More than supply</h3>
+            <p>We do not just source products. We prepare products in a way that works better for social commerce: stronger visual appeal, better packaging, and order-ready support.</p>
+          </div>
+          <div class="mini-card">
+            <div class="tag">Current Focus</div>
+            <h3>Evening bags + accessories</h3>
+            <p>We currently focus on curated evening bag styles, fashion accessories, and related supporting items for GCC sellers.</p>
+          </div>
+          <div class="mini-card">
+            <div class="tag">Order Type</div>
+            <h3>Small-batch supply available</h3>
+            <p>We support smaller order quantities in the initial stage so customers can test products before scaling.</p>
           </div>
         </div>
       </div>
@@ -229,74 +320,128 @@
 
     <section id="offer">
       <div class="container">
-        <h2>What We Offer</h2>
-        <p class="section-intro">
-          We support sellers who need products that look stronger on social, feel better in hand, and are easier to test in smaller quantities.
-        </p>
+        <div class="section-head">
+          <div>
+            <h2>What We Offer</h2>
+            <div class="section-intro">
+              We supply curated evening bags, fashion accessories, and related product sets for GCC sellers who want products that are easier to present, easier to package, and easier to sell.
+            </div>
+          </div>
+        </div>
         <div class="grid-3">
           <div class="card">
-            <div class="feature-title">Curated Product Sourcing</div>
-            <p class="muted">We focus on visually strong, giftable, and social-commerce-friendly items suitable for GCC sellers.</p>
+            <div class="product-tag">Product Supply</div>
+            <div class="product-title">Curated product sourcing</div>
+            <p class="muted">Evening bags, fashion accessories, and related supporting items for boutiques, gifting, and social commerce display.</p>
           </div>
           <div class="card">
-            <div class="feature-title">Upgraded Packaging</div>
-            <p class="muted">We improve product presentation with packaging options designed to increase perceived value and support higher selling prices.</p>
+            <div class="product-tag">Packaging</div>
+            <div class="product-title">Upgraded packaging</div>
+            <p class="muted">Basic and upgraded packaging options to improve product presentation, gifting value, and customer experience.</p>
           </div>
           <div class="card">
-            <div class="feature-title">Content-Ready Assets</div>
-            <p class="muted">Basic photos, videos, and selling points can be prepared to help clients publish faster on Instagram, TikTok, and WhatsApp.</p>
+            <div class="product-tag">Order Support</div>
+            <div class="product-title">Ready-to-present sets</div>
+            <p class="muted">We help customers confirm styles, order configuration, and presentation direction before payment is collected.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="who">
+    <section id="products">
       <div class="container">
-        <h2>Who We Work With</h2>
-        <p class="section-intro">
-          Our supply model is designed for smaller teams that need flexible sourcing, stronger presentation, and lower-risk testing.
-        </p>
+        <div class="section-head">
+          <div>
+            <h2>Featured Products</h2>
+            <div class="section-intro">
+              Below are reference product types and starting prices for common orders.
+            </div>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="product-tag">Product Type 01</div>
+            <div class="product-title">Evening Bag Set</div>
+            <p class="muted">Curated evening bag styles for boutiques, gifting, and social commerce display.</p>
+            <div class="price">Starting from USD 99</div>
+          </div>
+          <div class="card">
+            <div class="product-tag">Product Type 02</div>
+            <div class="product-title">Evening Bag + Accessories Set</div>
+            <p class="muted">Matched product sets including evening bags and selected accessories for stronger presentation.</p>
+            <div class="price">Starting from USD 119</div>
+          </div>
+          <div class="card">
+            <div class="product-tag">Product Type 03</div>
+            <div class="product-title">Gift-Ready Packaging Option</div>
+            <p class="muted">Upgraded packaging options for sellers who want better gifting appeal and stronger customer presentation.</p>
+            <div class="price">Quoted by order</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Pricing</h2>
+            <div class="section-intro">
+              Our pricing depends on product style, quantity, packaging option, and order configuration.
+              Below are reference starting prices for common order types.
+            </div>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="product-title">Starter Product Set</div>
+            <div class="price">From USD 99</div>
+            <ul class="clean">
+              <li>Small-batch order support</li>
+              <li>Quotation confirmed by order</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="product-title">Curated Evening Bag + Accessories Set</div>
+            <div class="price">From USD 119</div>
+            <ul class="clean">
+              <li>Matched style presentation</li>
+              <li>Reference pricing for confirmed orders</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="product-title">Packaging Upgrade</div>
+            <div class="price">Quoted by order</div>
+            <ul class="clean">
+              <li>Depends on packaging type and quantity</li>
+              <li>Available for selected order types</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packaging">
+      <div class="container">
         <div class="grid-2">
           <div class="card">
-            <div class="feature-title">Best fit clients</div>
-            <ul class="clean muted">
-              <li>Small Instagram and TikTok sellers</li>
-              <li>GCC boutiques and gift shops</li>
-              <li>Emerging product brands</li>
-              <li>Private sellers and social commerce resellers</li>
+            <div class="tag">Packaging Options</div>
+            <h2>Packaging that supports presentation</h2>
+            <p class="section-intro">
+              We offer basic and upgraded packaging options to help sellers improve product presentation and gifting value.
+              Packaging options may include outer box upgrades, wrapping materials, and presentation inserts depending on order type.
+            </p>
+          </div>
+          <div class="card">
+            <div class="tag">Who We Work With</div>
+            <h2>Boutiques, gift shops, and social sellers</h2>
+            <ul class="clean">
+              <li>Boutiques</li>
+              <li>Gift shops</li>
+              <li>Small brands</li>
+              <li>Private resellers</li>
+              <li>Social commerce sellers in GCC markets</li>
             </ul>
-          </div>
-          <div class="card">
-            <div class="feature-title">Why clients work with us</div>
-            <ul class="clean muted">
-              <li>They want products that are easier to present online</li>
-              <li>They need packaging that supports better positioning</li>
-              <li>They want small-batch testing before scaling</li>
-              <li>They need content assets that save time</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <h2>Why SellBetter Supply</h2>
-        <p class="section-intro">
-          Traditional suppliers usually stop at product and price. We focus on making products easier to sell in social commerce environments.
-        </p>
-        <div class="grid-3">
-          <div class="card">
-            <div class="feature-title">Better visual fit</div>
-            <p class="muted">We prioritize items that are easier to display and more likely to perform in image- and video-led selling.</p>
-          </div>
-          <div class="card">
-            <div class="feature-title">Stronger packaging value</div>
-            <p class="muted">Packaging is treated as part of the selling strategy, not only as protection.</p>
-          </div>
-          <div class="card">
-            <div class="feature-title">Faster commercial use</div>
-            <p class="muted">We help shorten the time from sourcing to presentation by preparing ready-to-use support materials.</p>
           </div>
         </div>
       </div>
@@ -304,73 +449,83 @@
 
     <section id="how">
       <div class="container">
-        <h2>How It Works</h2>
-        <p class="section-intro">
-          Our process is designed to make it easier for sellers to test, present, and reorder without unnecessary complexity.
-        </p>
+        <div class="section-head">
+          <div>
+            <h2>How Ordering Works</h2>
+            <div class="section-intro">
+              Orders are confirmed manually because product style, quantity, packaging option, and shipping arrangement may vary by order.
+            </div>
+          </div>
+        </div>
         <div class="steps">
-          <div class="card"><div class="step-num">Step 1</div><div class="feature-title">Request Catalog</div><div class="muted">Start by reviewing available SKUs and categories.</div></div>
-          <div class="card"><div class="step-num">Step 2</div><div class="feature-title">Select Options</div><div class="muted">Choose product, packaging level, and support needs.</div></div>
-          <div class="card"><div class="step-num">Step 3</div><div class="feature-title">Receive Quote</div><div class="muted">We confirm details, pricing, and order scope.</div></div>
-          <div class="card"><div class="step-num">Step 4</div><div class="feature-title">Pay Securely</div><div class="muted">Orders can be confirmed via secure payment link.</div></div>
-          <div class="card"><div class="step-num">Step 5</div><div class="feature-title">Test & Restock</div><div class="muted">Start with a sample or small batch, then reorder based on response.</div></div>
+          <div class="card">
+            <div class="step-num">1</div>
+            <div class="product-title">Review products</div>
+            <p class="muted">We share available product options and reference information.</p>
+          </div>
+          <div class="card">
+            <div class="step-num">2</div>
+            <div class="product-title">Confirm order details</div>
+            <p class="muted">Product style, quantity, packaging option, and shipping arrangement are confirmed manually.</p>
+          </div>
+          <div class="card">
+            <div class="step-num">3</div>
+            <div class="product-title">Receive final quotation</div>
+            <p class="muted">We provide the final order quotation after order confirmation.</p>
+          </div>
+          <div class="card">
+            <div class="step-num">4</div>
+            <div class="product-title">Complete payment</div>
+            <p class="muted">Payment is collected after order confirmation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="payment">
+      <div class="container faq">
+        <div class="card">
+          <div class="tag">Order Confirmation and Payment</div>
+          <h2>Why is payment confirmed after order review?</h2>
+          <p class="section-intro">
+            Our website is currently used as a product presentation and inquiry page rather than a full e-commerce checkout site.
+            Most orders require manual confirmation before payment because product style, quantity, packaging option, and shipping arrangement may vary by order.
+            For this reason, we confirm order details first and then arrange payment for approved orders.
+          </p>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p class="section-intro">For catalog requests, product discussions, or partnership enquiries, please contact us below.</p>
-        <div class="grid-2">
-          <div class="card">
-            <div class="feature-title">General Enquiries</div>
-            <p class="muted"><strong>Email:</strong> hello@sellbettersupply.com</p>
-            <p class="muted"><strong>Website:</strong> www.sellbettersupply.com</p>
-            <p class="muted"><strong>WhatsApp:</strong> <a href="https://wa.me/8618922255562" target="_blank" rel="noopener noreferrer">+86 189 2225 5562</a></p>
-          </div>
-          <div class="card">
-            <div class="feature-title">Working model</div>
-            <p class="muted">We currently support small-batch product testing, packaging upgrades, and content-ready supply support for GCC social commerce sellers.</p>
+      <div class="container contact-box">
+        <div class="card">
+          <div class="tag">Contact</div>
+          <h2>Request product list, quotation, or small-batch order support</h2>
+          <p class="section-intro">
+            For product list, quotation, and order confirmation, please contact us directly.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:hello@sellbettersupply.com?subject=Request%20Quotation">Email Us</a>
+            <a class="btn secondary" href="https://wa.me/8618922255562" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
-      </div>
-    </section>
-      <section id="terms">
-      <div class="container">
-        <h2>Terms &amp; Conditions</h2>
-        <p class="section-intro">All product availability, pricing, order quantities, packaging options, and delivery timelines are subject to confirmation at the time of quotation. Orders are processed only after payment confirmation.</p>
-      </div>
-    </section>
-
-    <section id="shipping">
-      <div class="container">
-        <h2>Shipping &amp; Refund Policy</h2>
-        <p class="section-intro">Shipping timelines may vary by destination, carrier, and customs processing. Any product issue or shipping issue should be reported within the agreed inspection window after receipt. Final policy details can be confirmed per order.</p>
-      </div>
-    </section>
-
-    <section id="privacy">
-      <div class="container">
-        <h2>Privacy Policy</h2>
-        <p class="section-intro">We only use contact and order information for communication, quotation, order processing, and customer support. We do not sell customer information to third parties.</p>
+        <div class="card">
+          <div class="tag">Business Information</div>
+          <ul class="clean">
+            <li><strong>Website:</strong> www.sellbettersupply.com</li>
+            <li><strong>Email:</strong> hello@sellbettersupply.com</li>
+            <li><strong>WhatsApp:</strong> +86 189 2225 5562</li>
+            <li><strong>Operating Base:</strong> China</li>
+            <li><strong>Target Markets:</strong> Saudi Arabia, UAE</li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="brand" style="margin-bottom:10px;">SellBetter Supply</div>
-        <div>Legal entity: Guangzhou Jushu Engine Technology Co., Ltd.</div>
-        <div>Email: hello@sellbettersupply.com</div>
-        <div>Website: www.sellbettersupply.com</div>
-      </div>
-      <div class="policy-links">
-        <a href="#terms">Terms &amp; Conditions</a>
-        <a href="#shipping">Shipping &amp; Refund Policy</a>
-        <a href="#privacy">Privacy Policy</a>
-      </div>
+    <div class="container">
+      SellBetter Supply — Curated evening bags and accessories for GCC sellers.
     </div>
   </footer>
 </body>
